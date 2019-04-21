@@ -93,7 +93,7 @@ COOKIES_ENABLED = False
 DOWNLOADER_MIDDLEWARES = {
     # 'meituan.middlewares.MeituanDownloaderMiddleware': 543,
     'meituan.middlewares.MyUserAgentMiddleware': 400,
-    'meituan.middlewares.ProxyMiddleware': 543,
+    # 'meituan.middlewares.ProxyMiddleware': 543,
     # 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware':500
 }
 DOWNLOAD_TIMEOUT = 5
