@@ -97,12 +97,15 @@ DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware':500
 }
 DOWNLOAD_TIMEOUT = 5
+# RETRY_ENABLED = False
+REDIRECT_ENABLED = False
+DOWMLOAD_DELY=3
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
-HTTPERROR_ALLOWED_CODES = [302]
+# HTTPERROR_ALLOWED_CODES = [302]
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html

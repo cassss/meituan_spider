@@ -153,7 +153,7 @@ class ProxyMiddleware(object):
         useing = r.get('useing_proxy')
         r.lpush('bad_url', useing)
         r.ltrim('bad_url', 0, -1)
-        if r.llen('bad_url') >20 :
+        if r.llen('bad_url') >10 :
             proxys = r.lrange('bad_url', 0, -1)
             print(proxys)
             for proxy in proxys:
@@ -200,8 +200,11 @@ class ProxyMiddleware(object):
 
     def process_exception(self, request, exception, spider):
         # 出现异常时（超时）使用代理
-        print("\n出现异常:",exception, "\n")
-        self.first = False
-        self.dropProxy()
-        request = self.addProxy(request)
+        if exception.args[0] != "proxy":
+            self.dropProxy()
+            request = self.addProxy(request)
+            print("\n出现异常:{0}\n".format(str(exception.args[0])))
+        else:
+            print("\n出现异常:{0}\n".format(str(exception.args[0])))
+            print('此错误不更新代理')
         return request

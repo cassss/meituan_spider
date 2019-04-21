@@ -31,9 +31,22 @@ class UrlItem(scrapy.Item):
 
 class ShopItem(scrapy.Item):
 
-    name   = scrapy.Field()
-    phone  = scrapy.Field()
-    lat    = scrapy.Field()
-    lng    = scrapy.Field()
-    addr   = scrapy.Field()
+    cityId = scrapy.Field()
+    poiid = scrapy.Field()
+    name = scrapy.Field()
+    lat = scrapy.Field()
+    lng = scrapy.Field()
+    addr = scrapy.Field()
+    phone = scrapy.Field()
+    frontImg = scrapy.Field()
+    showStatus = scrapy.Field()
+    avgScore = scrapy.Field()
+    showType = scrapy.Field()
+    isQueuing = scrapy.Field()
+    areaid = scrapy.Field()
+    areaName = scrapy.Field()
+    districtid = scrapy.Field()
+    districtname = scrapy.Field()
+    avgPrice = scrapy.Field()
+    iUrl = scrapy.Field()
     pass
