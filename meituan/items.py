@@ -29,6 +29,29 @@ class UrlItem(scrapy.Item):
     city = scrapy.Field()
     pass
 
+class CategoryItem(scrapy.Item):
+    cate1 = scrapy.Field()
+    cate2 = scrapy.Field()
+    name  = scrapy.Field()
+    count = scrapy.Field()
+    region = scrapy.Field()
+
+class litteUrlItem(scrapy.Item):
+    url = scrapy.Field()
+    region = scrapy.Field()
+    cate = scrapy.Field()
+
+class shopUrlItem(scrapy.Item):
+    url = scrapy.Field()
+    name = scrapy.Field()
+    cid = scrapy.Field()
+    bid = scrapy.Field()
+    poiid = scrapy.Field()
+    city = scrapy.Field()
+    ctpoi = scrapy.Field()
+    gaevent = scrapy.Field()
+    created_at = scrapy.Field()
+
 class ShopItem(scrapy.Item):
 
     cityId = scrapy.Field()
@@ -49,4 +72,21 @@ class ShopItem(scrapy.Item):
     districtname = scrapy.Field()
     avgPrice = scrapy.Field()
     iUrl = scrapy.Field()
+    created_at = scrapy.Field()
+    pass
+
+class shopDataItem(scrapy.Item):
+    poiId    = scrapy.Field()
+    showType = scrapy.Field()
+    name     = scrapy.Field()
+    addr     = scrapy.Field()
+    frontImg = scrapy.Field()
+    lng      = scrapy.Field()
+    lat      = scrapy.Field()
+    openInfo = scrapy.Field()
+    avgPrice = scrapy.Field()
+    cates    = scrapy.Field()
+    cityId   = scrapy.Field()
+    created_at = scrapy.Field()
+    phone    = scrapy.Field()
     pass
